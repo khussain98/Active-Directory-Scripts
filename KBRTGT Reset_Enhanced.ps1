@@ -1,4 +1,4 @@
-# Store the domain information
+# Store the domain information retrieved
 $domain = Get-ADDomain
 
 # Get the KRBTGT account
