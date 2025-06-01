@@ -2,6 +2,10 @@
 # Requires: ActiveDirectory module
 # Purpose: Send email notifications to users about upcoming password expirations
 
+# Run this once to create the credential file, then comment out
+$Credential = Get-Credential
+$Credential.Password | Export-Clixml -Path "C:\Secure\SMTP_Cred.xml"
+
 # --- Configuration Parameters ---
 $SearchBase = "DC=CONTOSO,DC=com"
 $SMTPServer = "smtp.office365.com"
